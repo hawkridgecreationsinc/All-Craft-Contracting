@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allcraft Contracting | Garages & Basement Developments | Calgary, Airdrie & Chestermere</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        charcoal: '#111827',
+                        slate: '#1F2937',
+                        amber: {
+                            400: '#FBBF24',
+                            500: '#F59E0B',
+                            600: '#D97706'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-color: #111827;
+            background-image: radial-gradient(circle at top right, #1F2937 0%, #111827 70%);
+        }
+        .blueprint-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(245, 158, 11, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(245, 158, 11, 0.05) 1px, transparent 1px);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #111827; }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #F59E0B; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-amber-500 selection:text-charcoal">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-charcoal/95 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Brand Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-3 group">
+                        <div class="h-10 w-10 bg-amber-500 rounded flex items-center justify-center shadow-lg group-hover:bg-amber-400 transition-colors">
+                            <svg class="h-6 w-6 text-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="text-white font-black text-xl tracking-tight block leading-none">ALLCRAFT</span>
+                            <span class="text-amber-500 font-bold text-[10px] tracking-[0.25em] uppercase block mt-1">Contracting</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-300 hover:text-amber-400 text-xs lg:text-sm font-bold tracking-wider transition-colors uppercase">Garages & Basements</a>
+                    <a href="#advantage" class="text-gray-300 hover:text-amber-400 text-xs lg:text-sm font-bold tracking-wider transition-colors uppercase">The Super Advantage</a>
+                    <a href="#process" class="text-gray-300 hover:text-amber-400 text-xs lg:text-sm font-bold tracking-wider transition-colors uppercase">Our Process</a>
+                    <a href="#quote" class="bg-amber-500 hover:bg-amber-400 text-charcoal font-black text-xs lg:text-sm py-3 px-6 rounded-sm transition-all shadow-lg shadow-amber-500/20 uppercase tracking-wider">
+                        Free Quote
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-300 hover:text-white focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-charcoal border-t border-gray-800">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="#services" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block py-2 text-base font-semibold text-gray-300 hover:text-amber-400">Garages & Basements</a>
+                <a href="#advantage" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block py-2 text-base font-semibold text-gray-300 hover:text-amber-400">The Super Advantage</a>
+                <a href="#process" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block py-2 text-base font-semibold text-gray-300 hover:text-amber-400">Our Process</a>
+                <a href="#quote" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="block py-2 text-amber-400 font-bold">Get a Free Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 blueprint-grid"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-20">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest mb-6">
+                    <span class="h-2 w-2 rounded-full bg-amber-500"></span>
+                    Serving Calgary, Airdrie & Chestermere
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black text-white tracking-tight leading-[1.08] mb-6">
+                    Commercial Discipline.<br>
+                    <span class="text-amber-500">Built for Your Home.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 font-normal mb-10 max-w-2xl leading-relaxed">
+                    We specialize exclusively in <strong class="text-white font-semibold">custom garage builds and basement developments</strong>. Managed directly by experienced commercial Site Superintendents, we coordinate every trade with fast turnaround, strict code compliance, and clear communication from day one.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#quote" class="bg-amber-500 hover:bg-amber-400 text-charcoal text-center font-black py-4 px-8 rounded-sm transition-all shadow-xl shadow-amber-500/20 uppercase tracking-wider text-sm">
+                        Request Free Quote
+                    </a>
+                    <a href="#services" class="border border-gray-600 text-white text-center hover:bg-gray-800 font-bold py-4 px-8 rounded-sm transition-all uppercase tracking-wider text-sm">
+                        Explore Services
+                    </a>
+                </div>
+
+                <!-- Trust Bar -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-16 pt-8 border-t border-gray-800 max-w-2xl">
+                    <div>
+                        <p class="text-white font-extrabold text-lg">Full-Service GC</p>
+                        <p class="text-gray-400 text-xs mt-1">All trades coordinated in-house</p>
+                    </div>
+                    <div>
+                        <p class="text-white font-extrabold text-lg">Code Compliant</p>
+                        <p class="text-gray-400 text-xs mt-1">Permits & legal suite inspections</p>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1">
+                        <p class="text-white font-extrabold text-lg">Transparent Pricing</p>
+                        <p class="text-gray-400 text-xs mt-1">Free quotes & zero guesswork</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE SERVICES SECTION -->
+    <section class="py-24 bg-white" id="services">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-amber-600 uppercase mb-2">Focused Expertise</h2>
+                <h3 class="text-4xl font-black text-charcoal tracking-tight">Two Specialties. Executed Right.</h3>
+                <p class="mt-4 text-gray-600 text-lg">By focusing strictly on garages and basements, our crews and trade partners move faster, price sharper, and deliver cleaner finishes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                
+                <!-- Card 1: Garages -->
+                <div class="bg-gray-50 rounded-xl p-8 md:p-10 border border-gray-200 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="h-12 w-12 bg-charcoal text-amber-500 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-extrabold text-charcoal mb-3">Custom Detached & Attached Garages</h4>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            From standard double-car builds to oversized heated workshops and laneway garages, we handle the entire build from excavation and concrete pad to exterior finishes that match your home.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-700 mb-8 border-t border-gray-200 pt-6">
+                            <li class="flex items-start gap-3">
+                                <span class="text-amber-600 font-bold">✓</span>
+                                <span><strong>Concrete & Excavation:</strong> Engineered slabs, thickened-edge pads, and proper lot drainage.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-amber-600 font-bold">✓</span>
+                                <span><strong>Framing & Exterior:</strong> Structural framing, roofing, siding, and trim matched to your main residence.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-amber-600 font-bold">✓</span>
+                                <span><strong>Power, Heat & Doors:</strong> Sub-panels, EV charger rough-ins, insulation, drywall, gas heaters, and overhead doors.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#quote" class="inline-block text-center w-full bg-charcoal hover:bg-slate text-white font-bold py-3.5 px-6 rounded-sm transition-colors text-sm uppercase tracking-wider">
+                        Quote a Garage Build
+                    </a>
+                </div>
+
+                <!-- Card 2: Basements -->
+                <div class="bg-gray-50 rounded-xl p-8 md:p-10 border border-gray-200 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="h-12 w-12 bg-charcoal text-amber-500 rounded-lg flex items-center justify-center mb-6">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-extrabold text-charcoal mb-3">Basement Developments & Legal Suites</h4>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Turn unused square footage into high-value living space or a mortgage-helping secondary suite. We manage permits, inspections, and all interior trades under one roof.
+                        </p>
+                        <ul class="space-y-3 text-sm text-gray-700 mb-8 border-t border-gray-200 pt-6">
+                            <li class="flex items-start gap-3">
+                                <span class="text-amber-600 font-bold">✓</span>
+                                <span><strong>Legal Secondary Suites:</strong> Egress windows, fire-rated drywall separation, interconnected smoke alarms, and separate entries.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-amber-600 font-bold">✓</span>
+                                <span><strong>Mechanical & Electrical:</strong> Complete plumbing rough-ins, panel upgrades, pot lighting, and HVAC zoning.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-amber-600 font-bold">✓</span>
+                                <span><strong>Complete Interior Finishing:</strong> Framing, insulation, drywall, painting, LVP/carpet flooring, bathrooms, and wet bars/kitchens.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#quote" class="inline-block text-center w-full bg-charcoal hover:bg-slate text-white font-bold py-3.5 px-6 rounded-sm transition-colors text-sm uppercase tracking-wider">
+                        Quote a Basement Project
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- THE SITE SUPER ADVANTAGE -->
+    <section class="py-24 bg-charcoal text-white relative overflow-hidden" id="advantage">
+        <div class="absolute inset-0 blueprint-grid"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <h2 class="text-sm font-bold tracking-widest text-amber-500 uppercase mb-2">Why Homeowners Choose Allcraft</h2>
+                    <h3 class="text-4xl font-black tracking-tight mb-6">Run by Commercial Site Superintendents.</h3>
+                    <p class="text-gray-200 text-lg leading-relaxed mb-8">
+                        The biggest frustration in residential renovation is poor communication and disappearing contractors. Allcraft Contracting was founded by two active commercial construction Site Superintendents—bringing commercial scheduling, safety standards, and quality control directly to your home.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-slate/80 p-6 rounded-lg border border-gray-700">
+                            <h4 class="text-amber-400 font-bold text-base mb-2">Tight Trade Scheduling</h4>
+                            <p class="text-gray-300 text-sm leading-relaxed">Framers, electricians, plumbers, and drywallers are booked back-to-back so your project doesn't sit idle for weeks.</p>
+                        </div>
+                        <div class="bg-slate/80 p-6 rounded-lg border border-gray-700">
+                            <h4 class="text-amber-400 font-bold text-base mb-2">Clear, Direct Updates</h4>
+                            <p class="text-gray-300 text-sm leading-relaxed">You deal directly with the partners running your site—no middlemen, no runaround, and clear weekly milestones.</p>
+                        </div>
+                        <div class="bg-slate/80 p-6 rounded-lg border border-gray-700">
+                            <h4 class="text-amber-400 font-bold text-base mb-2">Clean & Respectful Sites</h4>
+                            <p class="text-gray-300 text-sm leading-relaxed">We protect your floors, keep materials organized, and maintain tidy workspaces throughout the build.</p>
+                        </div>
+                        <div class="bg-slate/80 p-6 rounded-lg border border-gray-700">
+                            <h4 class="text-amber-400 font-bold text-base mb-2">Fair, Honest Pricing</h4>
+                            <p class="text-gray-300 text-sm leading-relaxed">Detailed line-item scopes upfront so you know exactly what you're paying for with zero hidden markups.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="bg-slate rounded-xl p-8 md:p-10 border border-gray-700 shadow-2xl">
+                        <h4 class="text-amber-500 font-bold text-xs uppercase tracking-widest mb-2">Service Areas</h4>
+                        <h5 class="text-2xl font-extrabold text-white mb-6">Local Crews. Fast Turnaround.</h5>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            We actively manage residential builds across Calgary and surrounding communities, handling municipal permit requirements for each jurisdiction:
+                        </p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center justify-between border-b border-gray-700 pb-3">
+                                <span class="font-bold text-white">Calgary (All Quadrants)</span>
+                                <span class="text-xs bg-amber-500/20 text-amber-400 font-bold px-2.5 py-1 rounded">Active</span>
+                            </li>
+                            <li class="flex items-center justify-between border-b border-gray-700 pb-3">
+                                <span class="font-bold text-white">Airdrie</span>
+                                <span class="text-xs bg-amber-500/20 text-amber-400 font-bold px-2.5 py-1 rounded">Active</span>
+                            </li>
+                            <li class="flex items-center justify-between pb-1">
+                                <span class="font-bold text-white">Chestermere</span>
+                                <span class="text-xs bg-amber-500/20 text-amber-400 font-bold px-2.5 py-1 rounded">Active</span>
+                            </li>
+                        </ul>
+                        <a href="#quote" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-charcoal font-black py-3.5 rounded-sm transition-colors text-sm uppercase tracking-wider">
+                            Book Your Site Walkthrough
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4-STEP PROCESS -->
+    <section class="py-24 bg-gray-50 border-b border-gray-200" id="process">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-amber-600 uppercase mb-2">How It Works</h2>
+                <h3 class="text-4xl font-black text-charcoal tracking-tight">Stress-Free From Quote to Handover</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <div class="text-3xl font-black text-amber-500 mb-3">01</div>
+                    <h4 class="text-lg font-bold text-charcoal mb-2">Free Walkthrough & Quote</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">We visit your property, discuss your layout and goals, and deliver a clear, itemized quote with no obligation.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <div class="text-3xl font-black text-amber-500 mb-3">02</div>
+                    <h4 class="text-lg font-bold text-charcoal mb-2">Permits & Schedule Lock</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">We handle drawings, municipal building/development permits, and lock in your exact start date and trade schedule.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <div class="text-3xl font-black text-amber-500 mb-3">03</div>
+                    <h4 class="text-lg font-bold text-charcoal mb-2">Coordinated Build</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Our vetted trades execute framing, electrical, plumbing, drywall, and finishes under daily superintendent oversight.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <div class="text-3xl font-black text-amber-500 mb-3">04</div>
+                    <h4 class="text-lg font-bold text-charcoal mb-2">Final Inspection & Handover</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">We pass all city inspections, walk the finished space with you to verify every detail, and hand over the keys.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUOTE & CONTACT FOOTER -->
+    <section class="bg-charcoal py-24 text-white" id="quote">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                
+                <!-- Left Info -->
+                <div>
+                    <h2 class="text-sm font-bold tracking-widest text-amber-500 uppercase mb-2">Get Started</h2>
+                    <h3 class="text-4xl font-black text-white mb-6">Request Your Free Quote</h3>
+                    <p class="text-gray-200 text-lg leading-relaxed mb-8">
+                        Ready to build a new garage or develop your basement? Reach out anytime for a free on-site consultation and transparent estimate.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="h-12 w-12 bg-slate rounded-lg flex items-center justify-center mr-4 border border-gray-700 text-amber-500">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-amber-400 font-bold uppercase tracking-widest">Service Areas</p>
+                                <p class="text-white font-semibold text-lg">Calgary, Airdrie & Chestermere, AB</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div class="h-12 w-12 bg-slate rounded-lg flex items-center justify-center mr-4 border border-gray-700 text-amber-500">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-amber-400 font-bold uppercase tracking-widest">Phone</p>
+                                <p class="text-white font-semibold text-lg">(403) 555-0199</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div class="h-12 w-12 bg-slate rounded-lg flex items-center justify-center mr-4 border border-gray-700 text-amber-500">
+                                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            </div>
+                            <div>
+                                <p class="text-xs text-amber-400 font-bold uppercase tracking-widest">Email</p>
+                                <p class="text-white font-semibold text-lg">info@allcraftcontracting.ca</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Form (Connect to Formspree) -->
+                <div class="bg-slate p-8 md:p-10 rounded-xl border border-gray-700 shadow-2xl">
+                    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-5">
+                        <h4 class="text-xl font-bold text-white mb-2">Project Details</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-200 uppercase tracking-wider mb-2">Your Name</label>
+                                <input type="text" name="name" required class="w-full bg-charcoal border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-amber-500 transition-colors" placeholder="Jane Smith">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-200 uppercase tracking-wider mb-2">Phone Number</label>
+                                <input type="tel" name="phone" required class="w-full bg-charcoal border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-amber-500 transition-colors" placeholder="(403) 555-0142">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-200 uppercase tracking-wider mb-2">Email</label>
+                                <input type="email" name="email" required class="w-full bg-charcoal border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-amber-500 transition-colors" placeholder="jane@example.com">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-200 uppercase tracking-wider mb-2">City / Community</label>
+                                <select name="city" class="w-full bg-charcoal border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                    <option>Calgary</option>
+                                    <option>Airdrie</option>
+                                    <option>Chestermere</option>
+                                    <option>Other Surrounding Area</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-200 uppercase tracking-wider mb-2">Project Type</label>
+                            <select name="project_type" class="w-full bg-charcoal border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-amber-500 transition-colors">
+                                <option>Custom Detached / Attached Garage</option>
+                                <option>Basement Development (Living Space)</option>
+                                <option>Legal Secondary Basement Suite</option>
+                                <option>Garage + Basement Package</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-200 uppercase tracking-wider mb-2">Scope & Timeline Notes</label>
+                            <textarea name="message" rows="4" class="w-full bg-charcoal border border-gray-600 rounded p-3 text-white focus:outline-none focus:border-amber-500 transition-colors" placeholder="Tell us about your garage size, basement layout, or target start date..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-charcoal font-black py-4 rounded-sm transition-all shadow-lg uppercase tracking-wider text-sm">
+                            Send Quote Request
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="mt-20 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <span class="text-white font-black text-base tracking-tight">ALLCRAFT CONTRACTING</span>
+                    <span class="text-gray-600">|</span>
+                    <span class="text-gray-400 text-xs">Calgary • Airdrie • Chestermere</span>
+                </div>
+                <p class="text-gray-500 text-xs">
+                    &copy; 2026 Allcraft Contracting. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
